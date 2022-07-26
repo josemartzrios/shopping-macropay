@@ -26,12 +26,6 @@ html, body{
     font-family: 'Quicksand', sans-serif;
 }
 
-body{
-    position: relative;
-    padding: 2em 0;
-    min-height: 100vh;
-}
-
 nav{
     display: flex;
     justify-content: space-between;
@@ -39,9 +33,6 @@ nav{
     border-bottom: 1px solid var(--secondary-color);
 }
 
-.menu{
-    display: none;
-}
 
 .brand-name{
     font-size: var(--lg);
@@ -55,8 +46,8 @@ nav{
     margin-left: 12px;
 }
 
-.navbar-left ul{ 
-    margin-left: 12px;
+ .navbar-left ul{ 
+    margin-left: 12px; 
 }
 
 .navbar-right{
@@ -81,10 +72,6 @@ nav{
     font-size: var(--sm);
 }
 
-.navbar-left ul li a:hover, .navbar-right ul li a:hover{
-    border: 1px solid var(--dark-main);
-    color: var(--main-color);
-}
 
 .nav-email{
     color: var(--secondary-color);
@@ -112,11 +99,9 @@ nav{
     align-items: center;
 }
 
-.container{
-    height: 80vh;
-    position: relative;
-    min-height: 100vh;
-}
+/* .container{
+    
+} */
 
 .container .search-bar{
     display: flex;
@@ -206,28 +191,180 @@ input[type=text]:focus, form button:focus {
 
 footer{
     background-color: var(--dark-main);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    display: grid;
+    justify-content: center;
+    padding: 10px;
 }
 
+.left-footer{
+    grid-template-columns: 1 / 2;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 20px;
+}
 
+.left-footer ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
 
+.left-footer ul li{
+    text-decoration: none;
+    padding: 8px;
+}
+
+.left-footer ul li a{
+    text-decoration: none;
+}
+
+.left-footer .fa{
+    font-size: 3.0rem;
+    color: var(--white);
+    margin-bottom: 5px;
+}
+
+.subtitle{
+    display: flex;
+    align-self: center;
+    color: var(--main-color);
+    font-size: var(--lg);
+    margin-bottom: 15px;
+}
+
+.center-footer{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.center-footer .mapouter{
+    display: flex;
+    justify-content: center;
+}
+
+.right-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.right-footer .subtitle-mini{
+    align-self: center;
+    color: var(--white);
+    font-size: var(--md);
+}
 
 @media (max-width: 640px){
-    .menu{
-        display: block;
-    }
 
     .navbar-left ul{
-        display: none;
+        padding: 0 24px;
+        font-size: 3.5rem;
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--black);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        height: 27vh;
     }
 
-    .navbar-email{
+    .navbar-left ul li a{
+        transition: 0.7s ease;
+        margin: 10px 0;
+        border: none;
+        color: var(--white)
+    }
+
+    .navbar-left ul li a:hover{
+        text-decoration: underline;
+    }
+
+    .hamburguer{
+        display: block;
+        cursor: pointer;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-left .user-email{
+        color: var(--main-color);
+    }
+
+    .navbar-left ul.active{
+        left: 0;
+    }
+
+    .nav-email{
         display: none;
     }
 
     .brand-name{
         margin-right: 10px;
     }
+}
+
+@media (min-width: 641px){ 
+
+    .navbar-left .user-email{
+        display: none;
+    }
+
+    .navbar-left ul li a:hover, .navbar-right ul li a:hover{
+        border: 1px solid var(--dark-main);
+        color: var(--main-color);
+    } 
+
+    .hamburguer{
+        display: none;
+    }
+
+    footer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .left-footer{
+        justify-content: start;
+    }
+
+    .right-footer{
+        padding-bottom: 10px;
+    }
+}
+
+@media (min-width: 870px){
+    
+    footer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .right-footer{
+        justify-content: start;
+    }
+}
+
+@media (min-width: 1280px){
+
+    /* .container{
+        height: 100vh;
+    } */
+    
+    footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    
 }
