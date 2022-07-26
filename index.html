@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Shop shop!</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <img src="./iconos/icon_menu.svg" alt="menú" class="menu">
+            
+            <div class="navbar-left">
+                <span class="brand-name">Shop shop!</span>
+            
+                <ul>
+                    <li>
+                        <a href="#">Products</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="navbar-right">
+                <ul>
+                    <li class="nav-email">user@email.com</li>
+                    <li class="nav-cart">
+                        <img src="./iconos/icon_shopping_cart.svg" alt="cart">
+                        <span class="product-number" id="little-number">2</span>
+                    </li>  
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- CONTAINER -->
+    <main class="container">
+
+        <form id="searchForm" class="search-bar">
+            <input type="text" placeholder="Nokia" />
+            <button>🔍</button>
+        </form>
+
+        <section class="cards-container">
+
+            <article class="phone-card">
+                <img src="https://cdn1.coppel.com/images/catalog/pm/2323163-1.jpg?iresize=width:300,height:240" alt="">
+                <div class="phone-info">
+                    <div>
+                        <p>$11,899</p>
+                        <p>Apple iPhone 11</p>
+                    </div>
+                    <button class="button-item">Add to cart</button>
+                </div>
+            </article>
+
+            <article class="phone-card">
+                <img src="https://cdn1.coppel.com/images/catalog/pm/2265473-1.jpg?iresize=width:300,height:240" alt="">
+                <div class="phone-info">
+                    <div>
+                        <p>$5,799</p>
+                        <p>Motorola G60</p>
+                    </div>
+                    <button class="button-item">Add to cart</button>
+                </div>
+            </article>
+
+            <article class="phone-card">
+                <img src="https://cdn1.coppel.com/images/catalog/pm/2721233-1.jpg?iresize=width:300,height:240" alt="">
+                <div class="phone-info">
+                    <div>
+                        <p>$4,919</p>
+                        <p>Motorola G22</p>
+                    </div>
+                    <button class="button-item">Add to cart</button>
+                </div>
+            </article>
+
+            <article class="phone-card">
+                <img src="https://cdn1.coppel.com/images/catalog/pm/2636123-1.jpg?iresize=width:300,height:240" alt="">
+                <div class="phone-info">
+                    <div>
+                        <p>$2,199</p>
+                        <p>Samsung Galaxy A03</p>
+                    </div>
+                    <button class="button-item">Add to cart</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <section class="left-footer">
+            <ul>
+                <li>
+                    <a href="#" class="fa fa-facebook"></a>
+                </li>
+                <li>
+                    <a href="#" class="fa fa-twitter"></a>
+                </li>
+                <li>
+                    <a href="#" class="fa fa-instagram"></a>
+                </li>
+            </ul>
+        </section>
+
+
+    </footer>
+
+
+
+    <script src="./main.js"></script>
+</body>
+</html>

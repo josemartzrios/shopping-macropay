@@ -1,0 +1,233 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    /* el 62.5% es para manejar el valor de tamaño REM 
+    por ejemplo: p { font-size: 1.6 rem (16 px) } */
+}
+
+:root{
+    --secondary-color: #C7C7C7; 
+    --main-color: #caacd9;
+    --dark-main: #6c0076;
+    --white: #FFFFFF;
+    --black: #000000;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+}
+
+html, body{
+    min-height: 100%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body{
+    position: relative;
+    padding: 2em 0;
+    min-height: 100vh;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.menu{
+    display: none;
+}
+
+.brand-name{
+    font-size: var(--lg);
+    display: flex;
+    align-self: center;
+    margin-right: 4px;
+}
+
+.navbar-left{
+    display: flex;
+    margin-left: 12px;
+}
+
+.navbar-left ul{ 
+    margin-left: 12px;
+}
+
+.navbar-right{
+    display: flex;
+}
+
+.navbar-left ul, .navbar-right ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 8vh;
+}
+
+.navbar-left ul li a, .navbar-right ul li a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    border: 1px solid var(--white);
+    padding: 8px;
+    border-radius: 8px;
+    font-size: var(--sm);
+}
+
+.navbar-left ul li a:hover, .navbar-right ul li a:hover{
+    border: 1px solid var(--dark-main);
+    color: var(--main-color);
+}
+
+.nav-email{
+    color: var(--secondary-color);
+    font-size: var(--sm);
+    margin-right: 12px;
+}
+
+.nav-cart{
+    position: relative;
+}
+
+.nav-cart .product-number{
+    width: 15px;
+    height: 15px;
+    background-color: var(--dark-main);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: var(--sm);
+    font-weight: bold;
+    position: absolute;
+    top: -6px;
+    right: -2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 80vh;
+    position: relative;
+    min-height: 100vh;
+}
+
+.container .search-bar{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: nowrap;
+    margin-top: 50px;
+}
+
+.search-bar input[type=text]{
+    height: 38px;
+    width: 80%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: 1px solid var(--main-color);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=text]:focus, form button:focus {
+    border: 3px solid var(--dark-main);
+}
+
+.search-bar button{
+    width: 46px;
+    height: 38px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 1px solid var(--main-color);
+    background-color: var(--white);
+    cursor: pointer;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap: 26px;
+    justify-content: center;
+    padding-bottom: 2.5rem;
+}
+
+.phone-card{
+    width: 240px;
+}
+
+.phone-card img{
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.phone-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0 0 0;
+}
+
+.phone-info div p:nth-child(1){
+    font-weight: bold;
+    font-size: var(--md);
+    margin: 0 0 4px 0;
+}
+
+.phone-info div p:nth-child(2){
+    font-size: var(--sm);
+    margin: 0 0 0 0;
+    color: var(--main-color);
+}
+
+.phone-info button{
+    width: 75px;
+    padding: 3px;
+    display: flex;
+    align-self: flex-end;
+    background-color: var(--dark-main);
+    color: var(--white);
+    cursor: pointer;
+    border-radius: 3px;
+    margin-right: 5px;
+    border: none;
+}
+
+footer{
+    background-color: var(--dark-main);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+@media (max-width: 640px){
+    .menu{
+        display: block;
+    }
+
+    .navbar-left ul{
+        display: none;
+    }
+
+    .navbar-email{
+        display: none;
+    }
+
+    .brand-name{
+        margin-right: 10px;
+    }
+}
