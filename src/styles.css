@@ -26,6 +26,10 @@ html, body{
     font-family: 'Quicksand', sans-serif;
 }
 
+/* !!!!!!!!!!!!! */
+/* NAVBAR */
+/* !!!!!!!!!!!!! */
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -99,9 +103,9 @@ nav{
     align-items: center;
 }
 
-/* .container{
-    
-} */
+/* !!!!!!!!!!!!! */
+/* CONTAINEER */
+/* !!!!!!!!!!!!! */
 
 .container .search-bar{
     display: flex;
@@ -145,6 +149,76 @@ input[type=text]:focus, form button:focus {
     gap: 26px;
     justify-content: center;
     padding-bottom: 2.5rem;
+    margin-top: 15px;
+}
+
+
+.modal-container{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+}
+
+
+
+.phone-card .open-btn{
+    background-color: var(--main-color);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    color: var(--black);
+    font-size: var(--lg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    margin-bottom: 3px;
+}
+
+
+.modal{
+    background-color: var(--white);
+    width: 300px;
+    max-width: 400px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: var(--sm);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.modal h1{
+    margin: 0 0 10px 0;
+}
+
+.modal p{
+    opacity: .7;
+}
+
+.modal .close-btn{
+    background-color: var(--dark-main);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    color: var(--white);
+    font-size: var(--md);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    position: relative;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.show{
+    pointer-events: auto;
+    opacity: 1;
 }
 
 .phone-card{
@@ -178,7 +252,7 @@ input[type=text]:focus, form button:focus {
 
 .phone-info button{
     width: 75px;
-    padding: 3px;
+    padding: 5px 5px;
     display: flex;
     align-self: flex-end;
     background-color: var(--dark-main);
@@ -187,6 +261,7 @@ input[type=text]:focus, form button:focus {
     border-radius: 3px;
     margin-right: 5px;
     border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 footer{
